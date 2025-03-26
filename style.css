@@ -1,0 +1,58 @@
+body {
+  background-color: goldenrod;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.loader {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #7a91a0;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  width: 50px;
+  height: 50px;
+}
+
+.lazy-load {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.list__img {
+  display: block;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+.list__item {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+  position: relative;
+  width: 500px;
+  height: 580px;
+}
+
+/* Стили с практики присутствуют */
